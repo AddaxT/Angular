@@ -1,0 +1,13 @@
+<div class="container">
+    <div class="container-fluid">
+        <div class="container">
+            <ul>
+                <li *ngFor="let contact of contacts" (click)="onSelect(contact)">
+                    <span class="badge">{{contact.ID}}</span>
+                    <span>{{contact.NAME}}</span>
+                    <button class="delete" (click)="deleteContact(contact); $event.stopPropagation()">x</button>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>

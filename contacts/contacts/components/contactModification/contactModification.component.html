@@ -1,0 +1,15 @@
+<div>
+    <div *ngIf="update">
+        <label>Id: </label>{{contact.ID}}
+    </div>
+    <div *ngIf="!update">
+        <label>Id: </label>
+        <input [(ngModel)]="contact.ID" placeholder="id" />
+    </div>
+    <div>
+        <label>Nombre: </label>
+        <input [(ngModel)]="contact.NAME" placeholder="nombre" />
+    </div>
+    <button (click)="goBack()">Cancelar</button>
+    <button (click)="save()">Guardar</button>
+</div>
